@@ -1,30 +1,7 @@
 package jspappl;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.stream.Collectors;
-
 public class Individual {
-
-    public ArrayList<Integer> nums;
-    public static ArrayList<Integer> GetNumArr(String[] unsortedStringArr){
-        return (ArrayList<Integer>) Arrays.stream(unsortedStringArr).map(Integer::parseInt).collect(Collectors.toList());
-
-    }
-
-    public static ArrayList<Integer> getSortedArray(ArrayList<Integer> lst_) {
-        Collections.sort(lst_);
-        return lst_;
-    }
-
-    public static ArrayList<Integer> getSortedArray(String[] unsortedStringArr) {
-        ArrayList<Integer> lst_ = GetNumArr(unsortedStringArr);
-        Collections.sort(lst_);
-        return lst_;
-    }
-
-    public int[] GetSumEvenOddNumbers(String args[]) {
+    public static int[] GetSumEvenOddNumbers(String args[]) {
         int sumOddNumbers = 0; //переменная-счетчик для нечетных чисел
         int sumEvenNumbers = 0; //переменная-счетчик для нечетных чисел
         for(String strNum : args){
@@ -39,13 +16,11 @@ public class Individual {
         return new int[] {sumOddNumbers, sumEvenNumbers};
     }
 
-    public static String getResultsToWeb(ArrayList<Integer> lst_){
-        String results = "";
-        for (Integer elem:lst_) {
-            results+="<tr><td>"+elem.toString()+"</td></tr>";
-        }
-        return results;
+    public static String getResultsToWeb(String args[]){
+        int [] resultArray = GetSumEvenOddNumbers(args);
+        String resultString = "<tr><td>Сумма нечётных чисел: </td> <td>" + resultArray[0] + "</td></tr>" +
+                "<tr><td>Сумма чётных чисел: </td> <td>" + resultArray[1] + "</td></tr>";
+        System.out.println(resultString);
+        return resultString;
     }
-
-
 }

@@ -18,14 +18,12 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <h1>Главная страница </h1>
 <h3>Введите числа для разбиения через пробел</h3>
 <form name="Input form" action="jsp_3.jsp">
-    <label>
-        <input type="text" name="values"/>
-    </label>
+    <input type="text" name="values"/>
     <input type="submit" value="Получить данные" name="button1"/>
     <%mybean.addCounter(1);%>
     <h1>${mybean.counter}</h1>
 </form>
-<a href="jsp_3.jsp?values=1+2+3+4+5">Финальная страница</a>
+<a href="jsp_3.jsp">Финальная страница</a>
 <a href="jsp_1.jsp">Начальная страница</a>
 </body>
 </html>
