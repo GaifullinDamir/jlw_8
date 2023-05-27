@@ -1,22 +1,31 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+<%@ page import="jspappl.Individual" %>
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/html"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>JSP Page</title>
+    <title>Лаб. 8</title>
 </head>
 <body>
-<%! int counter; %>
-<jsp:useBean id="mybean" scope="session" class="com.example.jlw_8.NameHandler" />
-<%mybean.addCounter(Integer.parseInt(request.getParameter("name")));%>
-<jsp:setProperty name="mybean" property="name" />
-<h3>Приветствую тебя, <jsp:getProperty name="mybean" property="name" />, так.</h3>
-<h3>Приветствую тебя, ${mybean.name}, и вот так. </h3>
-<form name="Back form" action="jsp_1.jsp">
-    <input type="submit" value="Back" name="button2" />
+<jsp:useBean id="mybean" scope="session" class="jspappl.NameHandler" />
+<jsp:useBean id="individual" scope="session" class="jspappl.Individual" />
+<h1>Главная страница </h1>
+<h3>Введите числа для разбиения через пробел</h3>
+<form name="Input form" action="jsp_3.jsp">
+    <label>
+        <input type="text" name="values"/>
+    </label>
+    <input type="submit" value="Получить данные" name="button1"/>
+    <%mybean.addCounter(1);%>
+    <h1>${mybean.counter}</h1>
 </form>
-<h3>Счётчик <jsp:getProperty name="mybean" property="counter" /></h3>
-<h3>Счётчик <%=++counter %></h3>
+<a href="jsp_3.jsp?values=1+2+3+4+5">Финальная страница</a>
+<a href="jsp_1.jsp">Начальная страница</a>
 </body>
-
 </html>

@@ -1,20 +1,38 @@
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
-<%-- Объявление библиотек тэгов JSF --%>
-<!DOCTYPE html>
-<html xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/html"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Словарь-переводчик</title>
+    <title>Лаб. 8</title>
 </head>
 <body>
-<jsp:useBean id="mybean" scope="session" class="com.example.jlw_8.NameHandler" />
-<h3>Введите ваше имя</h3>
-<form name="Input form" action="jsp_2.jsp">
-    <input type="text" name="name" />
-    <input type="submit" value="OK" name="button1" />
-    <%mybean.addCounter(1);%>
-</form>
-<a href="jsp_2.jsp?name=123">Переход</a>
+<jsp:useBean id="mybean" scope="session" class="jspappl.NameHandler" />
+<h1>Стартовая страница</h1>
+<pre>1 0 1 1 11
+    * 1 вариант
+    * 5) Программный код вычисляемой функции разместить:  1 –
+    в классе Bean-компоненты. [ ]
+    * 6) Заголовки страниц должны иметь следующий вид: 0 – «Стартовая страница»,
+    «Главная страница» и «Финишная страница».[ ]
+    * 7) Формат «Стартовой страницы»:  1 – содержит текст
+    задания на лабораторную работу, группа студента и кнопку для перехода на
+    «Главную страницу». [+]
+    * 8) Организовать вывод результатов работы функции на «Финишной странице»: 1 – р
+    езультаты должны быть каким-то образом размещены в видимой таблице, в таблице допускается
+    произвольное число
+    столбцов и строк. [ ]
+    * 9) При повторном переходе на «Главную страницу», например при нажатии кнопки
+    «Возврат» на «Финишной странице», на «Главной странице» должно отображаться: 3 –
+    общее число переходов (обновлений) страниц Web-приложения. [ ]`</pre>
+<h1>Группа 4311</h1>
+<a href="jsp_2.jsp">Главная страница</a>
 </body>
 </html>

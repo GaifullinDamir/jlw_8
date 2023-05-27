@@ -24,7 +24,7 @@
     <title>Словарь-переводчик</title>
 </head>
 <body>
-<jsp:useBean id="mybean" scope="session" class="com.example.jlw_8.NameHandler" />
+<jsp:useBean id="mybean" scope="session" class="jspappl.NameHandler" />
 <h3>Введите ваше имя</h3>
 <form name="Input form" action="jsp_2.jsp">
     <input type="text" name="name" />

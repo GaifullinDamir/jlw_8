@@ -1,4 +1,4 @@
-package com.example.jlw_8;
+package jspappl;
 
 public class NameHandler {
     private String name;
