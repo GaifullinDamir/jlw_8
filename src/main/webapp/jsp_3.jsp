@@ -11,11 +11,13 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Лаб. 8</title>
+    <title>Финальная страница</title>
 </head>
 <body>
 <jsp:useBean id="individual" scope="session" class="jspappl.Individual" />
-<h1>Финишная страница</h1>
+<jsp:useBean id="mybean" scope="session" class="jspappl.NameHandler" />
+<%mybean.addCounter(1);%>
+<h1>Финальная страница</h1>
 <h1>Гайфуллин Д.Р. 4311</h1>
 <table border id="results">
     <%=Individual.getResultsToWeb(request.getParameter("values").split(" "))%>

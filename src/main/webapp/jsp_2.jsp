@@ -10,7 +10,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Лаб. 8</title>
+    <title>Главная страница</title>
 </head>
 <body>
 <jsp:useBean id="mybean" scope="session" class="jspappl.NameHandler" />
